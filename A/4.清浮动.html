@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        #outer{
+            width: 700px;
+            border:1px solid #ccc;
+            background-color: #cecece;
+            margin: 20px auto;
+            padding:20px;
+        }
+
+        #div1,#div2,#div3{
+            width: 100px;
+            height: 100px;
+        }
+        #div1{
+            float: left;
+            background-color: red;
+        }
+        #div2{
+            float: left;
+            background-color: blue;
+        }
+        #div3{
+            float: left;
+            background-color: green;
+        }
+
+      #clear{
+          clear: both;
+          height:0;
+          line-height: 0;
+          font-size: 0;
+      }
+
+        /*我们知道如果它里面的元素不浮动的话，那么这个外层的高是会自动被撑开的。但是当内层元素浮动后，就出现了一下影响：
+
+    （1）：背景不能显示 （2）：边框不能撑开 （3）：margin 设置值不能正确显示*/
+    </style>
+</head>
+<body>
+
+<div id="outer">
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="clear"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: #00b3ee;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box" ></div>
+</body>
+<script>
+
+    let box=document.getElementById('box');
+//
+//    let width=document.getElementById('box').style.width;
+//    console.log(width); //此方法只能获取行内内嵌式的样式。style="width:300px"
+    box.getBoundingClientRect(box).top;  //  元素上边到视窗上边的距离
+     box.getBoundingClientRect(box).right //  元素右边到视窗左边的距离
+     box.getBoundingClientRect(box).bottom; //  元素下边到视窗上边的距离
+     box.getBoundingClientRect(box).left; //  元素左边到视窗左边的距离
+
+     //  获得元素的宽高,说一点在标准盒子模型下，他获取到的盒子的宽度是content-width+border+padding  而在IE盒子模型下他获取到的是你设置的宽度，因为在IE盒子模型下padding和border是算在width里的
+     box.getBoundingClientRect(box).width;
+
+
+</script>
+</html>
